@@ -1,20 +1,58 @@
+```html
+<!DOCTYPE html>
 <html>
-	<head>
-		<link href="style.css" rel="stylesheet">
-		<title>Your name resume</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	</head>
 
-	<body>
-		<header id="header">
-			<!-- resume header with your name and title -->
-			<h1>Theresa Anneli Pfeiffer</h1>
-			<hr>
-			M.Sc. Biomedical Engineering
-			<hr>
-		</header>
-		<main>
-			<article id="mainLeft">
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Theresa Pfeiffer Resume</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+
+    <div id="hero">
+
+        <img src="balance.jpeg" alt="Balance Photo">
+
+        <div class="hero-overlay">
+
+            <h1>THERESA PFEIFFER</h1>
+
+            <p class="tagline">
+                Biomedical Engineer
+            </p>
+
+            <p class="motto">
+                Curiosity. Innovation. Impact.
+            </p>
+
+            <div class="scroll-indicator">
+                ↓
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RESUME CONTENT -->
+
+    <div id="resume-content">
+
+        <header id="header">
+            <h1>Theresa Anneli Pfeiffer</h1>
+            <hr>
+            M.Sc. Biomedical Engineering
+            <hr>
+        </header>
+
+        <main>
+
+            <article id="mainLeft">
+
 				<section>
 					<h2>CONTACT</h2>
 					<!-- contact info including social media -->
@@ -71,8 +109,11 @@
                             <li>Danish (Basics)</li>
                             <li>Russian (Reading and writing)</li>
                     </ul>
-                </section>           
-			</article>
+                </section>  
+
+            </article>
+
+            
 			<article id="mainRight">
 				<section>
 					<h2>ABOUT</h2>
@@ -119,6 +160,55 @@
                     </p>
                 </section>
             </article>
+
+            </article>
+
+        </main>
+
+    </div>
+
+    <script>
+
+        const hero = document.getElementById('hero');
+
+        let heroHidden = false;
+
+        function revealResume() {
+
+            if (heroHidden) return;
+
+            hero.style.transform = 'translateY(-100%)';
+
+            heroHidden = true;
+        }
+
+        window.addEventListener('wheel', function (event) {
+
+            if (event.deltaY > 0) {
+
+                revealResume();
+            }
+
+        }, { passive: true });
+
+        window.addEventListener('touchmove', function () {
+
+            revealResume();
+
+        }, { once: true });
+
+        document.querySelector('.scroll-indicator')
+            .addEventListener('click', revealResume);
+
+    </script>
+
+</body>
+
+</html>
+```
+
+			         
+			
         </main>
     </body>
 </html>
