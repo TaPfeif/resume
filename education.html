@@ -1,56 +1,221 @@
+```html
+<!DOCTYPE html>
 <html>
-	<head>
-		<link href="style.css" rel="stylesheet">
-		<title>Education - Theresa Pfeiffer Resume</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Education - Theresa Pfeiffer Resume</title>
 
-	<body>
-		<header id="header">
-			<!-- resume header with your name and title -->
-			<h1>Education</h1>
-			
-		</header>
-		<main>
-			<article id="mainLeft">
-				<section>
-					<a href="index.html"><h2>← Back to Resume</h2></a>
-				</section>
-			</article>
-			<article id="mainRight">
-				<section>
-					<h1>Technical University of Denmark</h1>
-					<!-- your education -->
-                    <h2>M.Sc. Biomedical Engineering (2024 - 2026)</h3>
-                    <p>
-                        The 2 year master involved advanced coursework in biomedical signal processing, medical device development, and regulatory compliance, along with a research thesis focused on innovative solutions for hearing health technologies.
-                    </p>
-                    <p>
-                        To wrap up my degree, I am currently working on my master thesis in collaboration with the Copenhagen Hearing and Balance Center, where I am building a framework to integrate machine learning-based pose estimation into a app for vestibular rehabilitation exercises. This project combines my expertise in biomedical engineering, signal processing, and software development to create a practical tool for improving patient outcomes in vestibular therapy.
-                    </p>
-                    <h1>Hong Kong University of Science and Technology (2025)</h1>
-					<!-- your education -->
-                    <h2>Exchange Semester in Master program</h3>
-                    <p>
-                        An exicting part of my master program was the opportunity to spend a semester at the Hong Kong University of Science and Technology (HKUST) in 2025. During this exchange, I took courses in advanced biosensor development and image processing. 
-                    </p>
-                    <h1>University of Applied Sciences Hamburg (2019 - 2023)</h1>
-                    <h2>B.Sc. Biomedical Engineering</h2>
-                    <p>
-                        Completed a comprehensive 3.5 year bachelor program in biomedical engineering, covering fundamental topics such as medical instrumentation, signal processing, and regulatory compliance.
-                    </p>
-                    <p>
-                        My bachelor thesis, conducted in collaboration with the Design Quality Assurance department at Olympus Surgical Technologies Europe, focused on enhancing the design verification process by optimizing material compatibility testing protocols. This project provided valuable experience in applying engineering principles to real-world challenges in a regulated medical environment.
-                    </p>
-                    <p>Completed comprehensive coursework in biomedical engineering, including signal processing, medical instrumentation, and regulatory compliance.</p>
-                    
-                     <h1>Tecnológico de Monterrey, Mexico (2022)</h1>
-                     <h2>Exchange Semester in Bachelor program</h2>
-                    <p>
-                        An exciting part of my bachelor program was the opportunity to spend a semester at the Tecnológico de Monterrey in Mexico in 2022. During this exchange, I took courses in computer science and software development, which sparked my interest in programming and led me to further develop my skills in this area throughout my studies.
-                    </p>
-                </section> 
-            </article>
-        </main>
-    </body>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <style>
+
+        #map {
+            height: 650px;
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .education-entry {
+            padding: 15px;
+            border-radius: 12px;
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            background-color: #fff8d6;
+            box-shadow: 0 0 15px rgba(255,200,0,0.35);
+        }
+
+        #mainLeft {
+            position: sticky;
+            top: 20px;
+            align-self: start;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header id="header">
+    <h1>Education</h1>
+</header>
+
+<main>
+
+    <article id="mainLeft">
+
+        <section>
+            <a href="index.html">
+                <h2>← Back to Resume</h2>
+            </a>
+        </section>
+
+        <div id="map"></div>
+
+    </article>
+
+    <article id="mainRight">
+
+        <section>
+
+            <div id="dtu" class="education-entry">
+
+                <h1>Technical University of Denmark</h1>
+
+                <h2>M.Sc. Biomedical Engineering (2024 - 2026)</h2>
+
+                <p>
+                    The 2 year master involved advanced coursework in biomedical signal processing,
+                    medical device development, and regulatory compliance, along with a research
+                    thesis focused on innovative solutions for hearing health technologies.
+                </p>
+
+                <p>
+                    To wrap up my degree, I am currently working on my master thesis in collaboration
+                    with the Copenhagen Hearing and Balance Center, where I am building a framework
+                    to integrate machine learning-based pose estimation into an app for vestibular
+                    rehabilitation exercises.
+                </p>
+
+            </div>
+
+            <div id="hkust" class="education-entry">
+
+                <h1>Hong Kong University of Science and Technology (2025)</h1>
+
+                <h2>Exchange Semester in Master Program</h2>
+
+                <p>
+                    An exciting part of my master program was the opportunity to spend a semester
+                    at HKUST in 2025. During this exchange, I took courses in advanced biosensor
+                    development and image processing.
+                </p>
+
+            </div>
+
+            <div id="haw" class="education-entry">
+
+                <h1>University of Applied Sciences Hamburg (2019 - 2023)</h1>
+
+                <h2>B.Sc. Biomedical Engineering</h2>
+
+                <p>
+                    Completed a comprehensive 3.5 year bachelor program in biomedical engineering,
+                    covering fundamental topics such as medical instrumentation, signal processing,
+                    and regulatory compliance.
+                </p>
+
+                <p>
+                    My bachelor thesis, conducted in collaboration with Olympus Surgical
+                    Technologies Europe, focused on enhancing the design verification process
+                    by optimizing material compatibility testing protocols.
+                </p>
+
+            </div>
+
+            <div id="tec" class="education-entry">
+
+                <h1>Tecnológico de Monterrey, Mexico (2022)</h1>
+
+                <h2>Exchange Semester in Bachelor Program</h2>
+
+                <p>
+                    During this exchange semester, I took courses in computer science and software
+                    development, which sparked my interest in programming and led me to further
+                    develop my software engineering skills.
+                </p>
+
+            </div>
+
+        </section>
+
+    </article>
+
+</main>
+
+<script>
+
+    // Create map
+
+    var map = L.map('map').setView([35, 20], 2);
+
+    L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+            attribution: '&copy; OpenStreetMap contributors'
+        }
+    ).addTo(map);
+
+    // Highlight function
+
+    function highlightSection(id) {
+
+        document
+            .querySelectorAll('.education-entry')
+            .forEach(el => el.classList.remove('highlight'));
+
+        const target = document.getElementById(id);
+
+        target.classList.add('highlight');
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+
+    // DTU
+
+    L.marker([55.785, 12.521])
+        .addTo(map)
+        .bindPopup("<b>Technical University of Denmark</b>")
+        .on('click', () => highlightSection('dtu'));
+
+    // HKUST
+
+    L.marker([22.336, 114.263])
+        .addTo(map)
+        .bindPopup("<b>Hong Kong University of Science and Technology</b>")
+        .on('click', () => highlightSection('hkust'));
+
+    // HAW Hamburg
+
+    L.marker([53.557, 10.023])
+        .addTo(map)
+        .bindPopup("<b>University of Applied Sciences Hamburg</b>")
+        .on('click', () => highlightSection('haw'));
+
+    // Tecnológico de Monterrey
+
+    L.marker([25.651, -100.289])
+        .addTo(map)
+        .bindPopup("<b>Tecnológico de Monterrey</b>")
+        .on('click', () => highlightSection('tec'));
+
+    // Education journey path
+
+    L.polyline([
+        [53.557, 10.023],      // Hamburg
+        [25.651, -100.289],    // Monterrey
+        [55.785, 12.521],      // DTU
+        [22.336, 114.263]      // HKUST
+    ], {
+        weight: 3,
+        opacity: 0.7
+    }).addTo(map);
+
+</script>
+
+</body>
 </html>
+```
