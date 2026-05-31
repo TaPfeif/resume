@@ -1,59 +1,253 @@
+```html
 <html>
-	<head>
-		<link href="style.css" rel="stylesheet">
-		<title>Work Experience - Theresa Pfeiffer Resume</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	</head>
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Work Experience - Theresa Pfeiffer Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-	<body>
-		<header id="header">
-			<!-- resume header with your name and title -->
-			<h1>Theresa Anneli Pfeiffer</h1>
-			<hr>
-			M.Sc. Biomedical Engineering
-			<hr>
-		</header>
-		<main>
-			<article id="mainLeft">
-				<section>
-					<a href="index.html"><h2>← Back to Resume</h2></a>
-				</section>
-			</article>
-			<article id="mainRight">
-				<section>
-					<h2>WORK EXPERIENCE</h2>
-					<!-- your work experience -->
-                    <h3>Student Assistant</h3>
-                    <p>
-                            Olympus Surgical Technologies Europe | 2022 - 2024
-                    </p>
-                    <p>
-                        Working student in Team Life-Cycle-Management (R&D Software Applications and System Integration): Supported technical documentation and compliance processes in a regulated medical environment.
-                    </p>
-                    <p>
-                        Bachelor thesis for the Design Quality Assurance department (DQA): Enhanced design verification process by optimizing material compatibility testing protocols.
-                    </p> 
-                    <p>
-                        Internship at the Design Quality Assurance department (DQA): Conducted root-cause analysis of discoloration and corrosion in autoclaves, contributing to improved sterilization reliability.
-                    </p>
-                    
-                    <h3>Tutor</h3>
-                    <p>
-                            University of Applied Sciences Hamburg | 2021 - 2022
-                    </p>
-                    <p>
-                            Physics II Tutor - Mentored students through advanced physics concepts and problem-solving.
-                    </p>
-                    
-                    <h3>Social Worker</h3>
-                    <p>
-                            Weltwärts Volunteer in Mexico | 2018 - 2019
-                    </p>
-                    <p>
-                            Provided German classes and administrative support for migrant communities; fostered intercultural exchange and social inclusion.
-                    </p>
-                </section>
-            </article>
-        </main>
-    </body>
+    <style>
+
+        .timeline-container {
+            margin-top: 40px;
+        }
+
+        .olympus-card {
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 60px;
+            background: #fafafa;
+        }
+
+        .olympus-card h2 {
+            margin-top: 0;
+        }
+
+        .olympus-stages {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stage {
+            flex: 1;
+            min-width: 220px;
+            border-left: 4px solid #555;
+            padding-left: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+
+        .timeline-line {
+            height: 4px;
+            background: #333;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .timeline-events {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .event {
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+            position: relative;
+        }
+
+        .event::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #333;
+            position: absolute;
+            top: -59px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .event-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 12px;
+            background: white;
+            min-height: 150px;
+        }
+
+        .event-year {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .event-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header id="header">
+    <h1>Theresa Anneli Pfeiffer</h1>
+    <hr>
+    M.Sc. Biomedical Engineering
+    <hr>
+</header>
+
+<main>
+
+    <article id="mainLeft">
+        <section>
+            <a href="index.html">
+                <h2>← Back to Resume</h2>
+            </a>
+        </section>
+    </article>
+
+    <article id="mainRight">
+
+        <h2>Professional Journey</h2>
+
+        <div class="timeline-container">
+
+            <!-- OLYMPUS FEATURE CARD -->
+
+            <div class="olympus-card">
+
+                <h2>Olympus Surgical Technologies Europe</h2>
+
+                <p>
+                    My most significant industry experience to date. During three consecutive roles,
+                    I gained experience in medical device development, quality assurance,
+                    compliance, technical documentation and design verification within a highly
+                    regulated healthcare environment.
+                </p>
+
+                <div class="olympus-stages">
+
+                    <div class="stage">
+                        <h3>Internship</h3>
+                        <p><strong>2022</strong></p>
+                        <p>
+                            Conducted root-cause analysis of discoloration and corrosion in
+                            autoclaves, contributing to improved sterilization reliability.
+                        </p>
+                    </div>
+
+                    <div class="stage">
+                        <h3>Bachelor Thesis</h3>
+                        <p><strong>2023</strong></p>
+                        <p>
+                            Enhanced the design verification process by optimizing material
+                            compatibility testing protocols.
+                        </p>
+                    </div>
+
+                    <div class="stage">
+                        <h3>Student Assistant</h3>
+                        <p><strong>2023–2024</strong></p>
+                        <p>
+                            Supported technical documentation and compliance processes in
+                            R&D Software Applications and System Integration.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TIMELINE -->
+
+            <div class="timeline">
+
+                <div class="timeline-line"></div>
+
+                <div class="timeline-events">
+
+                    <div class="event">
+                        <div class="event-card">
+                            <div class="event-year">2016</div>
+                            <div class="event-title">Youth Group Leader</div>
+                            <p>
+                                Organized activities, led groups and developed leadership skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-card">
+                            <div class="event-year">2017</div>
+                            <div class="event-title">Homework Tutor</div>
+                            <p>
+                                Supported students with schoolwork and exam preparation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-card">
+                            <div class="event-year">2018–2019</div>
+                            <div class="event-title">Social Worker</div>
+                            <p>
+                                Weltwärts Volunteer in Mexico.
+                                German classes, administrative support and intercultural exchange.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-card">
+                            <div class="event-year">2021–2022</div>
+                            <div class="event-title">Physics Tutor</div>
+                            <p>
+                                Mentored university students in advanced physics and problem solving.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-card">
+                            <div class="event-year">2022–2024</div>
+                            <div class="event-title">Olympus</div>
+                            <p>
+                                Internship, thesis and student assistant roles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-card">
+                            <div class="event-year">2025</div>
+                            <div class="event-title">Bartender / Barista</div>
+                            <p>
+                                Customer service, communication and fast-paced teamwork.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</main>
+
+</body>
 </html>
+```
