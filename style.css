@@ -79,6 +79,15 @@ section {
     .about-photo img { width: 100%; max-width: 320px; margin: 0 auto; }
 }
 
+/* Indentation for ABOUT bullets and exchange entries */
+.about-bullets p {
+    margin-left: 1.2rem;
+}
+
+.indented {
+    margin-left: 1.2rem;
+}
+
 i {
     margin-right: .5em;
 }
