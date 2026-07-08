@@ -52,6 +52,26 @@ section {
     margin: auto 1em 4em 2em;
 }
 
+/* About section: photo next to text */
+.about-content {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.about-photo img {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 6px 14px rgba(20,20,30,0.06);
+}
+
+@media (max-width: 700px) {
+    .about-content { flex-direction: column; }
+    .about-photo img { width: 100%; max-width: 320px; margin: 0 auto; }
+}
+
 i {
     margin-right: .5em;
 }
