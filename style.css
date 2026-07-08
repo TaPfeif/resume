@@ -55,18 +55,18 @@ section {
 /* About section: photo next to text */
 .about-section { position: relative; }
 .about-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 140px;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: start;
 }
 
 .about-photo {
-    margin-left: auto;
-    align-self: flex-start;
+    justify-self: end;
 }
 
 .about-photo img {
-    width: 80px;
+    width: 120px;
     height: auto;
     border-radius: 6px;
     object-fit: cover;
@@ -74,7 +74,8 @@ section {
 }
 
 @media (max-width: 700px) {
-    .about-content { flex-direction: column; }
+    .about-content { grid-template-columns: 1fr; }
+    .about-photo { justify-self: center; }
     .about-photo img { width: 100%; max-width: 320px; margin: 0 auto; }
 }
 
