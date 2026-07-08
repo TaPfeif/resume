@@ -152,79 +152,100 @@
                         <h2>PROJECTS</h2>
                         <div class="project-grid">
                             <div class="project-card" data-title="Camera based pose estimation for balance rehabilitation">
+                                <button class="card-close" aria-label="Close card">×</button>
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <h3>Camera based pose estimation for balance rehabilitation</h3>
-                                        <p>Pose-estimation system to support balance therapy.</p>
+                                        <p>Pose-estimation system to support treatment of vestibular disorders.</p>
                                     </div>
                                     <div class="card-back">
-                                        <p>Built a vision-based pipeline to extract posture metrics and feedback for rehabilitation exercises.</p>
-                                        <p class="meta">Role: Research & prototyping • 2024</p>
+                                        <p>As part of my Master's thesis, I built a prototype to assess balance workload during a one-leg standing test. The prototype is based on the MediaPipe pose estimation model and was evaluated with technical verification and clinical validation. I received the best grade for this project.</p>
+                                        <div class="card-media">
+                                            <video controls>
+                                                <source src="../fotos/poem.mp4" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="project-card" data-title="Non invasive glucose sensor">
+                                <button class="card-close" aria-label="Close card">×</button>
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <h3>Non invasive glucose sensor</h3>
                                         <p>Prototype sensor concept for non-invasive glucose monitoring.</p>
                                     </div>
                                     <div class="card-back">
-                                        <p>Explored optical and impedance-based sensing with ML models for concentration estimation.</p>
-                                        <p class="meta">Role: Sensor research • 2023</p>
+                                        <p>During an exchange semester at Hong Kong University of Science and Technology, I helped develop a non-invasive glucose sensor. Tasks included printing of the sensor, electrochemical modification, and evaluation in terms of sensitivity and storage stability.</p>
+                                        <div class="card-media-grid">
+                                            <img src="../fotos/lab.jpeg" alt="Laboratory setup" />
+                                            <img src="../fotos/print.jpeg" alt="Sensor printing" />
+                                            <img src="../fotos/sensor.jpeg" alt="Glucose sensor prototype" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="project-card" data-title="VegEx App for Home growers">
+                                <button class="card-close" aria-label="Close card">×</button>
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <h3>VegEx App for Home growers</h3>
                                         <p>Mobile app to help small-scale growers manage crops.</p>
                                     </div>
-                                    <div class="card-back">
-                                        <p>Designed offline-first features, low-bandwidth sync, and a task scheduler for growers.</p>
-                                        <p class="meta">Role: Product & design • 2025</p>
+                                    <div class="card-back card-back-side-by-side">
+                                        <div class="card-text">
+                                            <p>As part of the Global Sustainability Challenge, I developed a prototype for a social network for home growers. The platform allows home growers to exchange experience about harvesting from home, motivate each other, and most importantly trade harvests with other home growers. I achieved first place in the Asia Pacific Semi Finals.</p>
+                                        </div>
+                                        <div class="card-media card-media-no-crop">
+                                            <img src="../fotos/GSC.jpeg" alt="Global Sustainability Challenge" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="project-card" data-title="vHIT quality testing">
+                                <button class="card-close" aria-label="Close card">×</button>
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <h3>vHIT quality testing</h3>
                                         <p>Tooling for quality assessment of vestibular head-impulse tests.</p>
                                     </div>
-                                    <div class="card-back">
-                                        <p>Implemented analysis algorithms and visual reports to evaluate test signal integrity.</p>
-                                        <p class="meta">Role: Algorithm developer • 2024</p>
+                                    <div class="card-back card-back-side-by-side">
+                                        <div class="card-text">
+                                            <p>As part of my studies, I conducted a special course at the Copenhagen Hearing and Balance Center. I investigated the reliability of vHIT goggles used for the head impulse test. My research focused on finding out if the performed head rotation angle affected the gain calculation of the vHIT system.</p>
+                                        </div>
+                                        <div class="card-media card-media-no-crop">
+                                            <img src="../fotos/vHIT.png" alt="vHIT goggles and analysis" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="project-card" data-title="RESETTLE clinical study">
+                                <button class="card-close" aria-label="Close card">×</button>
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <h3>RESETTLE clinical study</h3>
                                         <p>Clinical study focusing on rehabilitation outcomes.</p>
                                     </div>
                                     <div class="card-back">
-                                        <p>Coordinated data collection and analysis for rehabilitation protocol evaluation.</p>
-                                        <p class="meta">Role: Coordinator & analysis • 2022</p>
+                                        <p>As part of my studies, I contributed to the clinical study RESETTLE about obesity treatment of people with childhood obesity using semaglutide. I quantified body composition and correlated it to treatment success.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="project-card" data-title="Surface discoloration detection">
+                                <button class="card-close" aria-label="Close card">×</button>
                                 <div class="card-inner">
                                     <div class="card-front">
                                         <h3>Surface discoloration detection</h3>
                                         <p>Computer vision to detect and quantify surface discoloration.</p>
                                     </div>
                                     <div class="card-back">
-                                        <p>Developed image-processing pipelines and classifiers to flag discoloration areas reliably.</p>
-                                        <p class="meta">Role: CV engineer • 2020</p>
+                                        <p>As part of my Bachelor's thesis, I conducted a study about surface discolorations from reprocessing. I developed an algorithm to quantify surface discoloration with the aim of researching how reprocessing intervals affect the amount of discoloration.</p>
                                     </div>
                                 </div>
                             </div>
@@ -237,6 +258,16 @@
                         const hero = document.getElementById('hero');
 
                         let heroHidden = false;
+
+                        // Check if user has visited before
+                        if (localStorage.getItem('resumeVisited')) {
+                            // Hide hero immediately if already visited
+                            hero.style.transform = 'translateY(-100%)';
+                            heroHidden = true;
+                        } else {
+                            // Mark as visited for future visits
+                            localStorage.setItem('resumeVisited', 'true');
+                        }
 
                         function revealResume() {
 
@@ -273,14 +304,20 @@
                             projectCards.forEach(card => {
                                 card.tabIndex = 0;
 
-                                function toggleCard() {
+                                function toggleCard(e) {
+                                    if (e) e.stopPropagation();
                                     if (openCard && openCard !== card) {
                                         openCard.classList.remove('expanded');
                                     }
                                     const nowOpen = card.classList.toggle('expanded');
                                     openCard = nowOpen ? card : null;
-                                    if (nowOpen) {
-                                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+
+                                function closeCard(e) {
+                                    if (e) e.stopPropagation();
+                                    if (openCard) {
+                                        openCard.classList.remove('expanded');
+                                        openCard = null;
                                     }
                                 }
 
@@ -290,10 +327,23 @@
                                         e.preventDefault();
                                         toggleCard();
                                     } else if (e.key === 'Escape') {
-                                        card.classList.remove('expanded');
-                                        openCard = null;
+                                        closeCard();
                                     }
                                 });
+
+                                // Close button handler
+                                const closeBtn = card.querySelector('.card-close');
+                                if (closeBtn) {
+                                    closeBtn.addEventListener('click', closeCard);
+                                }
+                            });
+
+                            // Close card when clicking outside
+                            document.addEventListener('click', (e) => {
+                                if (openCard && !openCard.contains(e.target)) {
+                                    openCard.classList.remove('expanded');
+                                    openCard = null;
+                                }
                             });
                         })();
 
