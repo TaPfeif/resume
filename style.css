@@ -209,3 +209,104 @@ h1, h2, h3 {
     z-index: 1;
 }
 
+
+
+/* ==========================================
+   PROJECTS SECTION
+========================================== */
+
+#projects {
+    padding: 2rem 1rem 3rem 1rem;
+    background: #fbfbfb;
+    margin-top: 2.5rem;
+    border-top: 1px solid #eee;
+}
+
+#projects h2 {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.6rem;
+    letter-spacing: .08em;
+}
+
+.project-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    align-items: flex-start;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-card {
+    flex: 0 0 16%;
+    min-width: 160px;
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(20,20,30,0.04);
+    cursor: pointer;
+    transition: all 320ms cubic-bezier(.2,.9,.2,1);
+    overflow: hidden;
+}
+
+.project-card:focus {
+    outline: 3px solid #dceeff;
+}
+
+.card-inner {
+    padding: 1rem;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-front h3 {
+    margin: 0 0 .35rem 0;
+    font-size: 1rem;
+}
+
+.card-front p {
+    margin: 0;
+    color: #666;
+    font-size: .9rem;
+}
+
+.card-back {
+    display: none;
+    margin-top: .75rem;
+    color: #333;
+    font-size: .95rem;
+}
+
+.project-card.expanded {
+    flex: 0 0 100%;
+    min-width: 100%;
+    transform: scale(1.01);
+    box-shadow: 0 14px 40px rgba(20,20,30,0.12);
+}
+
+.project-card.expanded .card-back {
+    display: block;
+}
+
+.project-card.expanded .card-front {
+    opacity: 0.6;
+}
+
+.meta {
+    margin-top: .6rem;
+    color: #777;
+    font-size: .85rem;
+}
+
+@media (max-width: 900px) {
+    .project-card { flex: 0 0 48%; min-width: 46%; }
+    .project-grid { gap: .75rem; }
+}
+
+@media (max-width: 480px) {
+    .project-card { flex: 0 0 80%; min-width: 80%; }
+}
+
