@@ -113,7 +113,7 @@
                                             </div>
                                         </div>
                                         <div class="about-photo">
-                                            <img src="me.jpeg" alt="Theresa Pfeiffer" />
+                                            <img src="./me.jpeg" alt="Theresa Pfeiffer" />
                                         </div>
                                     </div>
                                 </section>
@@ -339,15 +339,26 @@
                             });
 
                             // Close card when clicking outside
-                            document.addEventListener('click', (e) => {
-                                if (openCard && !openCard.contains(e.target)) {
-                                    openCard.classList.remove('expanded');
-                                    openCard = null;
-                                }
-                            });
-                        })();
+                                document.addEventListener('click', (e) => {
+                                    if (openCard && !openCard.contains(e.target)) {
+                                        openCard.classList.remove('expanded');
+                                        openCard = null;
+                                    }
+                                });
+
+                            // Reset hero button: clear the visit flag and reload
+                            const resetHeroBtn = document.getElementById('reset-hero-button');
+                            if (resetHeroBtn) {
+                                resetHeroBtn.addEventListener('click', function () {
+                                    try { localStorage.removeItem('resumeVisited'); } catch (err) {}
+                                    location.reload();
+                                });
+                            }
+                            })();
 
                     </script>
+
+                    <button id="reset-hero-button" title="Show hero" aria-label="Show hero">Show hero</button>
 
 </body>
 
