@@ -259,16 +259,6 @@
 
                         let heroHidden = false;
 
-                        // Check if user has visited before
-                        if (localStorage.getItem('resumeVisited')) {
-                            // Hide hero immediately if already visited
-                            hero.style.transform = 'translateY(-100%)';
-                            heroHidden = true;
-                        } else {
-                            // Mark as visited for future visits
-                            localStorage.setItem('resumeVisited', 'true');
-                        }
-
                         function revealResume() {
 
                             if (heroHidden) return;
@@ -345,20 +335,9 @@
                                         openCard = null;
                                     }
                                 });
-
-                            // Reset hero button: clear the visit flag and reload
-                            const resetHeroBtn = document.getElementById('reset-hero-button');
-                            if (resetHeroBtn) {
-                                resetHeroBtn.addEventListener('click', function () {
-                                    try { localStorage.removeItem('resumeVisited'); } catch (err) {}
-                                    location.reload();
-                                });
-                            }
                             })();
 
                     </script>
-
-                    <button id="reset-hero-button" title="Show hero" aria-label="Show hero">Show hero</button>
 
 </body>
 
